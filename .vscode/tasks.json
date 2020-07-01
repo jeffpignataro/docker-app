@@ -37,6 +37,22 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "docker-compose",
+            "command": "docker-compose",
+            "type": "process",
+            "args": [
+                "up",
+                "--build",
+                "--force-recreate",
+                "--detach"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
