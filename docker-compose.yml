@@ -8,6 +8,8 @@ services:
             - '33061:3306'
         env_file:
             - ./config/db.env
+        volumes: 
+            - db:/var/lib/mysql
     adminer:
         image: adminer
         restart: always
@@ -27,3 +29,5 @@ services:
             context: ./api
         ports:
             - '8081:80'
+volumes: 
+    db: 
