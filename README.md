@@ -16,4 +16,6 @@ This file can be placed any where in the project, but the default docker-compose
 
 ## Deploying default containers
 The default VS Code task executes the following:
-`docker compose up --build --force-recreate --detach`
+```
+docker compose up --build --force-recreate --detach
+```
