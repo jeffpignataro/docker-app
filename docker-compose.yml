@@ -18,14 +18,14 @@ services:
     app:
         restart: always
         build: 
-            dockerfile: dockerfile
+            dockerfile: Dockerfile.app
             context: ./app
         ports: 
             - '8080:80'
     api:
         restart: always
         build: 
-            dockerfile: dockerfile
+            dockerfile: Dockerfile.api
             context: ./api
         ports:
             - '8081:80'
