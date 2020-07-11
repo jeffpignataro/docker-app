@@ -31,14 +31,14 @@ This is not required as there are many other options for database management. Bu
 dotnet ef migrations add InitialCreate
 ```
 
-## API Controller Scaffolding
+## Connectionstring Reference
 Add DBContext and connectionstring information to `Startup.cs`
 ```
 services.AddDbContext<DockerAppContext>(options =>
     options.UseMySQL(Configuration["ConnectionStrings.docker-app"]));
 ```
 
-
+## API Controller Scaffolding
 Install the [aspnet-codegenerator](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-3.1) tool in order to quickly scaffold controllers based off the EF context.
 ```
 aspnet-codegenerator controller -name UserController -api -m User -dc DockerAppContext --relativeFolderPath Controllers/v1
