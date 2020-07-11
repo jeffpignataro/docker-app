@@ -1,5 +1,8 @@
 # Dockerized Dotnet Core Application
 
+## Prerequisites
+Make sure to install docker-io and docker-compose before proceeding with the application.
+
 ## Database configuration
 Create [.env file](https://docs.docker.com/compose/environment-variables/#/the-env-file) for managing environment configuration for MySQL.
 
@@ -17,7 +20,7 @@ This file can be placed any where in the project, but the default docker-compose
 ## API Connectionstring Configuration
 *Note: [Initialize dotnet user secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux#enable-secret-storage) if you have never used dotnet secrets.*
 
-Create [user sceret](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux#set-a-secret) for accessing the connectionstring established in the `db.env`.
+Create [user sceret](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux#set-a-secret) for accessing the connectionstring established in the `db.env`. This command should be run from the /api folder.
 ```
 dotnet user-secrets set ConnectionStrings.docker-app "Server=db-container;Port=db-port;Database=database-name;Uid=basic-user;Pwd=basic-user-password"
 ```
