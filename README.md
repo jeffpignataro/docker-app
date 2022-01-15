@@ -1,7 +1,7 @@
 # Dockerized Dotnet Core Application
 
 ## Prerequisites
-Make sure to install docker-io and docker-compose before proceeding with the application.
+Make sure to install docker and docker-compose before proceeding with the application.
 
 ## Database configuration
 Create [.env file](https://docs.docker.com/compose/environment-variables/#/the-env-file) for managing environment configuration for MySQL.
